@@ -1,0 +1,35 @@
+O sistema deve ter um wizard de cadastro de usuário.
+As telas do wizard devem permitir a navegação entre elas até o ato de salvar.
+Na primeira tela teremos informações pessoais, podendo diferenciar quando é CPF e CNPJ.
+Na segunda tela deve se ter as informações sobre endereço:
+Na terceira tela as opções de criação de login
+Login
+Senha
+Confirmar senha
+Check de confirmar os termos de uso
+O sistema só deve permitir o cadastro caso o usuário tenha aceitado os termos de uso.
+
+A tela inicial do sistema deve ter um botão de acesso e uma imagem sobre o sistema e o botão de sair, e acesso a tela de sobre e ajuda. 
+Além de ter um botão para realizar o cadastro no sistema e um botão de acessar o sistema que dá acesso a tela de login.
+
+Ao estar logado a tela inicial da área restrita deve permitir o administrador acessar a tela de cadastro dos itens do qual seu sistema trata, 
+tela de cadastro de novos administradores (que dá acesso a tela de cadastro), caso o login seja feito por um usuário que não é administrador 
+o sistema deve permitir que ele cadastre outros endereços.
+
+Em todas as telas deve se ter um botão para direcionar para tela de Home.
+Só usuários logados do tipo administrador poderão cadastrar um produto/item ou manipular as regras de negócio conforme a aplicação.
+Só usuário administrador poderá cadastrar um administrador.
+Os usuários comuns se auto cadastram.
+O sistema deve armazenar data e horário que cada usuário logar e deslogar do sistema.
+O sistema deve ter uma tela de concordância com os termos de uso.
+Tela de contato/Sobre;
+
+O sistema deve permitir a gestão de carros que irão fazer uma revisão em uma concessionária. Para realizar a gestão dos carros o usuário deve estar cadastrado e ativo. Além disso, , poderemos realizar no sistema:
+Cadastro de gestores
+- Dados pessoais (nome completo, endereço completo, e-mail, senha, data de nascimento, RG, CPF).
+Cadastrar marcas (nome, logo (plus), descrição)
+Cadastro de carros (nome, modelo, ano do modelo, ano de fabricação, quantidade de cavalos, litros do motor, quantidade de portas, marca, Status (novo ou usado), foto do carro (plus))
+Cadastro do cliente (nome completo, endereço completo, e-mail, senha, data de nascimento, RG, CPF)
+Endereço (Endereço, Número, Complemento, Bairro, Cidade, Estado, CEP)
+Ao logar no sistema o usuário deve ter acesso a informações sobre o total de carros cadastrados e quantidade de revisões agendadas.
+Além disso, deve ser possível realizar o logoff e ter acesso ao menu ajuda.
