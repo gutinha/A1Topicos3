@@ -154,12 +154,6 @@
     <Compile Include="Model\Carro.cs" />
     <Compile Include="Model\Const.cs" />
     <Compile Include="Model\Endereco.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Model\Log.cs" />
     <Compile Include="Model\LogSystem.cs" />
     <Compile Include="Model\Marca.cs" />
