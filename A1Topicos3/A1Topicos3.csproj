@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,10 +37,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -60,6 +63,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="EnderecoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnderecoDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="FormsAdmin\ManagerAdmin\CadastrarAdmin\CadAdmin.cs">
       <SubType>Form</SubType>
@@ -133,10 +141,46 @@
     <Compile Include="FormsAdmin\ManagerMarca\ProcurarMarca.Designer.cs">
       <DependentUpon>ProcurarMarca.cs</DependentUpon>
     </Compile>
-    <Compile Include="HomeUsuario.cs">
+    <Compile Include="FormsUsuario\AgendarRevisao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HomeUsuario.Designer.cs">
+    <Compile Include="FormsUsuario\AgendarRevisao.Designer.cs">
+      <DependentUpon>AgendarRevisao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsUsuario\ManagerEndereco\CadEndereco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsUsuario\ManagerEndereco\CadEndereco.Designer.cs">
+      <DependentUpon>CadEndereco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsUsuario\CadastrarUsuario\CadUsuario1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsUsuario\CadastrarUsuario\CadUsuario1.Designer.cs">
+      <DependentUpon>CadUsuario1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsUsuario\CadastrarUsuario\CadUsuario2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsUsuario\CadastrarUsuario\CadUsuario2.Designer.cs">
+      <DependentUpon>CadUsuario2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsUsuario\CadastrarUsuario\CadUsuario3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsUsuario\CadastrarUsuario\CadUsuario3.Designer.cs">
+      <DependentUpon>CadUsuario3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsUsuario\ManagerEndereco\HomeEndereco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsUsuario\ManagerEndereco\HomeEndereco.Designer.cs">
+      <DependentUpon>HomeEndereco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsUsuario\HomeUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsUsuario\HomeUsuario.Designer.cs">
       <DependentUpon>HomeUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
@@ -172,6 +216,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Topicos3CadAdminDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Topicos3CarroDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Topicos3CarroDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Topicos3EnderecoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Topicos3EnderecoDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Topicos3MarcaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -216,7 +270,25 @@
     <EmbeddedResource Include="FormsAdmin\ManagerMarca\ProcurarMarca.resx">
       <DependentUpon>ProcurarMarca.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomeUsuario.resx">
+    <EmbeddedResource Include="FormsUsuario\AgendarRevisao.resx">
+      <DependentUpon>AgendarRevisao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsUsuario\ManagerEndereco\CadEndereco.resx">
+      <DependentUpon>CadEndereco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsUsuario\CadastrarUsuario\CadUsuario1.resx">
+      <DependentUpon>CadUsuario1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsUsuario\CadastrarUsuario\CadUsuario2.resx">
+      <DependentUpon>CadUsuario2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsUsuario\CadastrarUsuario\CadUsuario3.resx">
+      <DependentUpon>CadUsuario3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsUsuario\ManagerEndereco\HomeEndereco.resx">
+      <DependentUpon>HomeEndereco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsUsuario\HomeUsuario.resx">
       <DependentUpon>HomeUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
@@ -403,6 +475,17 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Correios\AtendeClienteService.wsdl" />
+    <None Include="EnderecoDataSet.xsc">
+      <DependentUpon>EnderecoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EnderecoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EnderecoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EnderecoDataSet.xss">
+      <DependentUpon>EnderecoDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -423,6 +506,28 @@
     </None>
     <None Include="Topicos3CadAdminDataSet.xss">
       <DependentUpon>Topicos3CadAdminDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Topicos3CarroDataSet.xsc">
+      <DependentUpon>Topicos3CarroDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Topicos3CarroDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Topicos3CarroDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Topicos3CarroDataSet.xss">
+      <DependentUpon>Topicos3CarroDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Topicos3EnderecoDataSet.xsc">
+      <DependentUpon>Topicos3EnderecoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Topicos3EnderecoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Topicos3EnderecoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Topicos3EnderecoDataSet.xss">
+      <DependentUpon>Topicos3EnderecoDataSet.xsd</DependentUpon>
     </None>
     <None Include="Topicos3MarcaDataSet.xsc">
       <DependentUpon>Topicos3MarcaDataSet.xsd</DependentUpon>
@@ -457,5 +562,14 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>

@@ -34,6 +34,8 @@
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btCadEndereco = new System.Windows.Forms.Button();
+            this.btAgendarRevisao = new System.Windows.Forms.Button();
             this.toolStripMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +45,7 @@
             this.toolStripDropDownButton1});
             this.toolStripMenu.Location = new System.Drawing.Point(0, 0);
             this.toolStripMenu.Name = "toolStripMenu";
-            this.toolStripMenu.Size = new System.Drawing.Size(420, 25);
+            this.toolStripMenu.Size = new System.Drawing.Size(392, 25);
             this.toolStripMenu.TabIndex = 3;
             this.toolStripMenu.Text = "Menu";
             // 
@@ -79,11 +81,33 @@
             this.sobreToolStripMenuItem.Text = "Sobre";
             this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
+            // btCadEndereco
+            // 
+            this.btCadEndereco.Location = new System.Drawing.Point(30, 46);
+            this.btCadEndereco.Name = "btCadEndereco";
+            this.btCadEndereco.Size = new System.Drawing.Size(93, 52);
+            this.btCadEndereco.TabIndex = 4;
+            this.btCadEndereco.Text = "Cadastrar Endereço";
+            this.btCadEndereco.UseVisualStyleBackColor = true;
+            this.btCadEndereco.Click += new System.EventHandler(this.btCadEndereco_Click);
+            // 
+            // btAgendarRevisao
+            // 
+            this.btAgendarRevisao.Location = new System.Drawing.Point(129, 46);
+            this.btAgendarRevisao.Name = "btAgendarRevisao";
+            this.btAgendarRevisao.Size = new System.Drawing.Size(93, 52);
+            this.btAgendarRevisao.TabIndex = 5;
+            this.btAgendarRevisao.Text = "Agendar Revisão";
+            this.btAgendarRevisao.UseVisualStyleBackColor = true;
+            this.btAgendarRevisao.Click += new System.EventHandler(this.btAgendarRevisao_Click);
+            // 
             // HomeUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(420, 353);
+            this.ClientSize = new System.Drawing.Size(392, 269);
+            this.Controls.Add(this.btAgendarRevisao);
+            this.Controls.Add(this.btCadEndereco);
             this.Controls.Add(this.toolStripMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "HomeUsuario";
@@ -104,5 +128,7 @@
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
+        private System.Windows.Forms.Button btCadEndereco;
+        private System.Windows.Forms.Button btAgendarRevisao;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using A1Topicos3.FormsUsuario.CadastrarUsuario;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,13 +27,20 @@ namespace A1Topicos3
 
         private void buttonSair_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Sobre sobre = new Sobre();
             sobre.Show();
+        }
+
+        private void buttonCadastrar_Click(object sender, EventArgs e)
+        {
+            CadUsuario1 cadUsuario1 = new CadUsuario1();
+            cadUsuario1.Show();
+            Hide();
         }
     }
 }

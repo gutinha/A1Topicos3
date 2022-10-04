@@ -52,8 +52,6 @@ namespace A1Topicos3.FormsAdmin
                 }
                 else
                 {
-                    if (checkTermos.Checked)
-                    {
                         try
                         {
                             Const.cadAdmin.email = txtEmail.Text;
@@ -70,11 +68,6 @@ namespace A1Topicos3.FormsAdmin
                         {
                             MessageBox.Show("Erro ao salvar, procure o administrador!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-                    }
-                    else
-                    {
-                         MessageBox.Show("Você deve aceitar os termos de uso", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
                 }
         }
 

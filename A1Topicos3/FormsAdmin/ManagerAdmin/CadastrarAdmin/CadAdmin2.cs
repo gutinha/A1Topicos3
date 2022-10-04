@@ -67,7 +67,11 @@ namespace A1Topicos3.FormsAdmin
 
         private void buttonProximo_Click(object sender, EventArgs e)
         {
-            var end = new Endereco(txtCEP.Text, Convert.ToInt16(txtNumero.Text), txtComplemento.Text, txtBairro.Text, txtCidade.Text, txtEstado.Text, txtCEP.Text);
+            if (String.IsNullOrEmpty(txtNumero.Text))
+            {
+                txtNumero.Text = "0";
+            }
+            var end = new Endereco(txtEndereco.Text, Convert.ToInt16(txtNumero.Text), txtComplemento.Text, txtBairro.Text, txtCidade.Text, txtEstado.Text, txtCEP.Text);
             Const.cadAdmin.Endereco = new List<Endereco>();
             if (Const.cadAdmin.Endereco.Contains(end))
             {

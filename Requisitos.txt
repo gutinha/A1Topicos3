@@ -24,7 +24,9 @@ O sistema deve armazenar data e horário que cada usuário logar e deslogar do s
 O sistema deve ter uma tela de concordância com os termos de uso.
 Tela de contato/Sobre;
 
-O sistema deve permitir a gestão de carros que irão fazer uma revisão em uma concessionária. Para realizar a gestão dos carros o usuário deve estar cadastrado e ativo. Além disso, , poderemos realizar no sistema:
+O sistema deve permitir a gestão de carros que irão fazer uma revisão em uma concessionária. 
+Para realizar a gestão dos carros o usuário deve estar cadastrado e ativo. Além disso,poderemos realizar no sistema:
+
 Cadastro de gestores
 - Dados pessoais (nome completo, endereço completo, e-mail, senha, data de nascimento, RG, CPF).
 Cadastrar marcas (nome, logo (plus), descrição)

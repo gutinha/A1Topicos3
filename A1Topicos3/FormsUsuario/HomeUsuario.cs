@@ -1,4 +1,6 @@
-﻿using A1Topicos3.Model;
+﻿using A1Topicos3.FormsUsuario;
+using A1Topicos3.FormsUsuario.ManagerEndereco;
+using A1Topicos3.Model;
 using A1Topicos3.Util;
 using System;
 using System.Collections.Generic;
@@ -30,6 +32,18 @@ namespace A1Topicos3
         {
             Sobre sobre = new Sobre();
             sobre.Show();
+        }
+
+        private void btCadEndereco_Click(object sender, EventArgs e)
+        {
+            HomeEndereco homeEndereco = new HomeEndereco();
+            homeEndereco.Show();
+        }
+
+        private void btAgendarRevisao_Click(object sender, EventArgs e)
+        {
+            AgendarRevisao agendar = new AgendarRevisao();
+            agendar.Show();
         }
     }
 }

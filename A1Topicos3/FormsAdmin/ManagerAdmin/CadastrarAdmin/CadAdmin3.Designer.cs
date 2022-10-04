@@ -37,7 +37,6 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtConfirmarSenha = new System.Windows.Forms.TextBox();
-            this.checkTermos = new System.Windows.Forms.CheckBox();
             this.toolStripMenu = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -116,16 +115,6 @@
             this.txtConfirmarSenha.Size = new System.Drawing.Size(143, 20);
             this.txtConfirmarSenha.TabIndex = 7;
             // 
-            // checkTermos
-            // 
-            this.checkTermos.AutoSize = true;
-            this.checkTermos.Location = new System.Drawing.Point(35, 102);
-            this.checkTermos.Name = "checkTermos";
-            this.checkTermos.Size = new System.Drawing.Size(143, 17);
-            this.checkTermos.TabIndex = 8;
-            this.checkTermos.Text = "Concordo com os termos";
-            this.checkTermos.UseVisualStyleBackColor = true;
-            // 
             // toolStripMenu
             // 
             this.toolStripMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -152,20 +141,20 @@
             // homeToolStripMenuItem
             // 
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.homeToolStripMenuItem.Text = "Home";
             this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // ajudaToolStripMenuItem
             // 
             this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
-            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ajudaToolStripMenuItem.Text = "Ajuda";
             // 
             // sobreToolStripMenuItem
             // 
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sobreToolStripMenuItem.Text = "Sobre";
             this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
@@ -175,7 +164,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(293, 183);
             this.Controls.Add(this.toolStripMenu);
-            this.Controls.Add(this.checkTermos);
             this.Controls.Add(this.txtConfirmarSenha);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtEmail);
@@ -206,7 +194,6 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtConfirmarSenha;
-        private System.Windows.Forms.CheckBox checkTermos;
         private System.Windows.Forms.ToolStrip toolStripMenu;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;

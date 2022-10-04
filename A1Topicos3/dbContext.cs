@@ -8,7 +8,7 @@ namespace A1Topicos3
     public partial class dbContext : DbContext
     {
         public dbContext()
-            : base("name=ConnectionString")
+            : base("name=Connection")
         {
         }
 

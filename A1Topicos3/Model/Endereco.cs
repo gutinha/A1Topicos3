@@ -29,6 +29,17 @@ namespace A1Topicos3
         public int? Usuario_id { get; set; }
 
         public virtual Usuario Usuario { get; set; }
+        public Endereco(string endereco, int numero, string complemento, string bairro, string cidade, string estado, string cep, int Usuario_id)
+        {
+            this.endereco1 = endereco;
+            this.numero = numero;
+            this.complemento = complemento;
+            this.bairro = bairro;
+            this.cidade = cidade;
+            this.estado = estado;
+            this.cep = cep;
+            this.Usuario_id = Usuario_id;
+        }
         public Endereco(string endereco, int numero, string complemento, string bairro, string cidade, string estado, string cep)
         {
             this.endereco1 = endereco;
@@ -38,6 +49,10 @@ namespace A1Topicos3
             this.cidade = cidade;
             this.estado = estado;
             this.cep = cep;
+        }
+        public Endereco()
+        {
+
         }
     }
 }
