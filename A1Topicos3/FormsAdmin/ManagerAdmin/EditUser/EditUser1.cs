@@ -11,12 +11,18 @@ using System.Windows.Forms;
 
 namespace A1Topicos3.FormsAdmin.ManagerAdmin
 {
-    public partial class EditUser : Form
+    public partial class EditUser1 : Form
     {
-        public EditUser(Usuario usuario)
+        public EditUser1(Usuario usuario)
         {
             InitializeComponent();
             Const.editUser = usuario;
+            dateNascimento.Format = DateTimePickerFormat.Custom;
+            dateNascimento.CustomFormat = "dd/MM/yyyy";
+            txtNome.Text = Const.editUser.nome;
+            maskCPF.Text = Const.editUser.cpf;
+            maskRG.Text = Const.editUser.rg;
+            dateNascimento.Text = Const.editUser.dataNascimento.ToString();
         }
 
         private void buttonProximo_Click(object sender, EventArgs e)
@@ -36,10 +42,10 @@ namespace A1Topicos3.FormsAdmin.ManagerAdmin
                 var mes = Convert.ToInt16(Adata[1]);
                 var ano = Convert.ToInt16(Adata[2]);
 
-                Const.cadAdmin.dataNascimento = new DateTime(ano, mes, dia);
-                Const.cadAdmin.nome = txtNome.Text;
-                Const.cadAdmin.rg = maskRG.Text;
-                Const.cadAdmin.cpf = maskCPF.Text;
+                Const.editUser.dataNascimento = new DateTime(ano, mes, dia);
+                Const.editUser.nome = txtNome.Text;
+                Const.editUser.rg = maskRG.Text;
+                Const.editUser.cpf = maskCPF.Text;
                 EditUser2 editUser2 = new EditUser2();
                 editUser2.Show();
                 Hide();

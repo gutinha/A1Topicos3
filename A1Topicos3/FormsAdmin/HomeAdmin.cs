@@ -18,9 +18,11 @@ namespace A1Topicos3
 {
     public partial class HomeAdmin : Form
     {
+        dbContext db = new dbContext();
         public HomeAdmin()
         {
             InitializeComponent();
+            lbRevisaoAserFeita.Text = "Revisões a serem feitas: " + db.Revisao.Where(x => x.dataRevisao > DateTime.Now).Count();
         }
 
         private void HomeAdmin_FormClosing(object sender, FormClosingEventArgs e)

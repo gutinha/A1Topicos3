@@ -39,8 +39,8 @@ namespace A1Topicos3.FormsAdmin.ManagerCarro
 
         private void HomeManagerCarro_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Utils.logSair();
-            Application.OpenForms["Login"].Close();
+            HomeAdmin homeAdmin = new HomeAdmin();
+            homeAdmin.Show();
         }
     }
 }

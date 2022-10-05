@@ -36,6 +36,8 @@
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btCadEndereco = new System.Windows.Forms.Button();
             this.btAgendarRevisao = new System.Windows.Forms.Button();
+            this.lbCarrosCadastrados = new System.Windows.Forms.Label();
+            this.lbRevisão = new System.Windows.Forms.Label();
             this.toolStripMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,11 +103,31 @@
             this.btAgendarRevisao.UseVisualStyleBackColor = true;
             this.btAgendarRevisao.Click += new System.EventHandler(this.btAgendarRevisao_Click);
             // 
+            // lbCarrosCadastrados
+            // 
+            this.lbCarrosCadastrados.AutoSize = true;
+            this.lbCarrosCadastrados.Location = new System.Drawing.Point(248, 46);
+            this.lbCarrosCadastrados.Name = "lbCarrosCadastrados";
+            this.lbCarrosCadastrados.Size = new System.Drawing.Size(101, 13);
+            this.lbCarrosCadastrados.TabIndex = 6;
+            this.lbCarrosCadastrados.Text = "Carros cadastrados:";
+            // 
+            // lbRevisão
+            // 
+            this.lbRevisão.AutoSize = true;
+            this.lbRevisão.Location = new System.Drawing.Point(248, 66);
+            this.lbRevisão.Name = "lbRevisão";
+            this.lbRevisão.Size = new System.Drawing.Size(76, 13);
+            this.lbRevisão.TabIndex = 7;
+            this.lbRevisão.Text = "Suas revisões:";
+            // 
             // HomeUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(392, 269);
+            this.Controls.Add(this.lbRevisão);
+            this.Controls.Add(this.lbCarrosCadastrados);
             this.Controls.Add(this.btAgendarRevisao);
             this.Controls.Add(this.btCadEndereco);
             this.Controls.Add(this.toolStripMenu);
@@ -130,5 +152,7 @@
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
         private System.Windows.Forms.Button btCadEndereco;
         private System.Windows.Forms.Button btAgendarRevisao;
+        private System.Windows.Forms.Label lbCarrosCadastrados;
+        private System.Windows.Forms.Label lbRevisão;
     }
 }

@@ -39,7 +39,7 @@ namespace A1Topicos3.FormsUsuario.CadastrarEndereco
                 txtNumero.Text = "0";
             }
             var a = new Endereco(txtEndereco.Text, Convert.ToInt16(txtNumero.Text), txtComplemento.Text, txtBairro.Text, txtCidade.Text, txtEstado.Text, txtCEP.Text, Const.usuarioLogado.id);
-            Const.usuarioLogado.Endereco.Add(a);
+            Const.usuarioLogado.Endereco.Add(a); //Controle caso o usuário seja editado não perder dados
             try
             {
                 db.Endereco.Add(a);

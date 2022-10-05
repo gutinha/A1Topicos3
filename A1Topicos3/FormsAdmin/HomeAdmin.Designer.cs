@@ -37,6 +37,7 @@
             this.buttonCadAdmin = new System.Windows.Forms.Button();
             this.buttonMarca = new System.Windows.Forms.Button();
             this.btManagerCarro = new System.Windows.Forms.Button();
+            this.lbRevisaoAserFeita = new System.Windows.Forms.Label();
             this.toolStripMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +47,7 @@
             this.toolStripDropDownButton1});
             this.toolStripMenu.Location = new System.Drawing.Point(0, 0);
             this.toolStripMenu.Name = "toolStripMenu";
-            this.toolStripMenu.Size = new System.Drawing.Size(303, 25);
+            this.toolStripMenu.Size = new System.Drawing.Size(355, 25);
             this.toolStripMenu.TabIndex = 4;
             this.toolStripMenu.Text = "Menu";
             // 
@@ -85,7 +86,7 @@
             // 
             // buttonCadAdmin
             // 
-            this.buttonCadAdmin.Location = new System.Drawing.Point(12, 132);
+            this.buttonCadAdmin.Location = new System.Drawing.Point(218, 68);
             this.buttonCadAdmin.Name = "buttonCadAdmin";
             this.buttonCadAdmin.Size = new System.Drawing.Size(97, 57);
             this.buttonCadAdmin.TabIndex = 5;
@@ -95,7 +96,7 @@
             // 
             // buttonMarca
             // 
-            this.buttonMarca.Location = new System.Drawing.Point(12, 54);
+            this.buttonMarca.Location = new System.Drawing.Point(12, 68);
             this.buttonMarca.Name = "buttonMarca";
             this.buttonMarca.Size = new System.Drawing.Size(97, 57);
             this.buttonMarca.TabIndex = 6;
@@ -105,7 +106,7 @@
             // 
             // btManagerCarro
             // 
-            this.btManagerCarro.Location = new System.Drawing.Point(115, 54);
+            this.btManagerCarro.Location = new System.Drawing.Point(115, 68);
             this.btManagerCarro.Name = "btManagerCarro";
             this.btManagerCarro.Size = new System.Drawing.Size(97, 57);
             this.btManagerCarro.TabIndex = 7;
@@ -113,11 +114,21 @@
             this.btManagerCarro.UseVisualStyleBackColor = true;
             this.btManagerCarro.Click += new System.EventHandler(this.btManagerCarro_Click);
             // 
+            // lbRevisaoAserFeita
+            // 
+            this.lbRevisaoAserFeita.AutoSize = true;
+            this.lbRevisaoAserFeita.Location = new System.Drawing.Point(12, 38);
+            this.lbRevisaoAserFeita.Name = "lbRevisaoAserFeita";
+            this.lbRevisaoAserFeita.Size = new System.Drawing.Size(122, 13);
+            this.lbRevisaoAserFeita.TabIndex = 8;
+            this.lbRevisaoAserFeita.Text = "Revisões a serem feitas:";
+            // 
             // HomeAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(303, 198);
+            this.ClientSize = new System.Drawing.Size(355, 213);
+            this.Controls.Add(this.lbRevisaoAserFeita);
             this.Controls.Add(this.btManagerCarro);
             this.Controls.Add(this.buttonMarca);
             this.Controls.Add(this.buttonCadAdmin);
@@ -144,5 +155,6 @@
         private System.Windows.Forms.Button buttonCadAdmin;
         private System.Windows.Forms.Button buttonMarca;
         private System.Windows.Forms.Button btManagerCarro;
+        private System.Windows.Forms.Label lbRevisaoAserFeita;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace A1Topicos3.FormsAdmin.ManagerAdmin
 {
-    partial class EditUser
+    partial class EditUser1
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditUser));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditUser1));
             this.toolStripMenu = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();

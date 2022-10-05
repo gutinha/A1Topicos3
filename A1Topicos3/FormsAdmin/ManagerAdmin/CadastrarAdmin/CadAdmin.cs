@@ -76,54 +76,54 @@ namespace A1Topicos3.FormsAdmin.Cadastrar_Admin
                         }
 
                     }
+                }
+            }
+            if (e.ColumnIndex == 4)
+            {
+                if (e.RowIndex >= 0)
+                {
+                    var idUsuario = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+                    var condicao = !(bool)dataGridView1.Rows[e.RowIndex].Cells[4].Value;
 
-                    if (e.ColumnIndex == 4)
+                    if (MessageBox.Show("Você tem certeza que deseja " + (condicao ? "ativar" : "desativar") + " este usuário?",
+                        "Confirmação",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        if (e.RowIndex >= 0)
+                        try
                         {
-                            idUsuario = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
-                            condicao = !(bool)dataGridView1.Rows[e.RowIndex].Cells[4].Value;
-
-                            if (MessageBox.Show("Você tem certeza que deseja " + (condicao ? "ativar" : "desativar") + " este usuário?",
-                                "Confirmação",
-                                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            var user = db.Usuario.Where(x => x.id == idUsuario).First();
+                            if (Const.usuarioLogado.id == user.id)
                             {
-                                try
-                                {
-                                    var user = db.Usuario.Where(x => x.id == idUsuario).First();
-                                    if (Const.usuarioLogado.id == user.id)
-                                    {
-                                        MessageBox.Show("Você não pode editar você mesmo", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                    }
-                                    else
-                                    {
-                                        user.ativo = !user.ativo;
-                                        db.Entry(user).State = EntityState.Modified;
-                                        db.Log.Add(new Log(DateTime.Now, "Usuário " + Const.usuarioLogado.nome + " com id: " + Const.usuarioLogado.id + " " +
-                                            (condicao ? "ativou" : "desativou" + " o usuário " + user.nome + " com id: " + user.id),
-                                            Const.usuarioLogado.nome + " Id: " + Const.usuarioLogado.id));
-                                        db.SaveChanges();
-                                        MessageBox.Show("Usuário " + (condicao ? "ativado" : "desativado" + " com sucesso"), "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    }
-                                }
-                                catch (Exception)
-                                {
-                                    MessageBox.Show("Erro ao alterar");
-                                }
+                                MessageBox.Show("Você não pode editar você mesmo", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                user.ativo = !user.ativo;
+                                db.Entry(user).State = EntityState.Modified;
+                                db.Log.Add(new Log(DateTime.Now, "Usuário " + Const.usuarioLogado.nome + " com id: " + Const.usuarioLogado.id + " " +
+                                    (condicao ? "ativou" : "desativou" + " o usuário " + user.nome + " com id: " + user.id),
+                                    Const.usuarioLogado.nome + " Id: " + Const.usuarioLogado.id));
+                                db.SaveChanges();
+                                MessageBox.Show("Usuário " + (condicao ? "ativado" : "desativado" + " com sucesso"), "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
-                    }
-                    if(e.ColumnIndex == 5)
-                    {
-                        if(e.RowIndex >= 0)
+                        catch (Exception)
                         {
-                            idUsuario = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
-                            var userEdit = db.Usuario.Where(x => x.id == idUsuario).First();
-                            EditUser user = new EditUser(userEdit);
-                            user.Show();
-                            
+                            MessageBox.Show("Erro ao alterar");
                         }
                     }
+                }
+            }
+            
+            if (e.ColumnIndex == 5)
+            {
+                if (e.RowIndex >= 0)
+                {
+                    var idUsuario = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+                    var userEdit = db.Usuario.Where(x => x.id == idUsuario).First();
+                    EditUser1 user = new EditUser1(userEdit);
+                    user.Show();
+
                 }
             }
         }

@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnNovoUsuario = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.topicos3CadAdminDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.topicos3CadAdminDataSet = new A1Topicos3.Topicos3CadAdminDataSet();
-            this.usuarioTableAdapter = new A1Topicos3.Topicos3CadAdminDataSetTableAdapters.UsuarioTableAdapter();
-            this.lblProcurar = new System.Windows.Forms.Label();
-            this.txtProcurar = new System.Windows.Forms.TextBox();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adminDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ativoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.topicos3CadAdminDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.topicos3CadAdminDataSet = new A1Topicos3.Topicos3CadAdminDataSet();
+            this.usuarioTableAdapter = new A1Topicos3.Topicos3CadAdminDataSetTableAdapters.UsuarioTableAdapter();
+            this.lblProcurar = new System.Windows.Forms.Label();
+            this.txtProcurar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.topicos3CadAdminDataSetBindingSource)).BeginInit();
@@ -52,7 +52,7 @@
             // 
             // btnNovoUsuario
             // 
-            this.btnNovoUsuario.Location = new System.Drawing.Point(683, 415);
+            this.btnNovoUsuario.Location = new System.Drawing.Point(539, 348);
             this.btnNovoUsuario.Name = "btnNovoUsuario";
             this.btnNovoUsuario.Size = new System.Drawing.Size(98, 23);
             this.btnNovoUsuario.TabIndex = 0;
@@ -77,45 +77,9 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 41);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(769, 368);
+            this.dataGridView1.Size = new System.Drawing.Size(625, 301);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataMember = "Usuario";
-            this.usuarioBindingSource.DataSource = this.topicos3CadAdminDataSetBindingSource;
-            // 
-            // topicos3CadAdminDataSetBindingSource
-            // 
-            this.topicos3CadAdminDataSetBindingSource.DataSource = this.topicos3CadAdminDataSet;
-            this.topicos3CadAdminDataSetBindingSource.Position = 0;
-            // 
-            // topicos3CadAdminDataSet
-            // 
-            this.topicos3CadAdminDataSet.DataSetName = "Topicos3CadAdminDataSet";
-            this.topicos3CadAdminDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usuarioTableAdapter
-            // 
-            this.usuarioTableAdapter.ClearBeforeFill = true;
-            // 
-            // lblProcurar
-            // 
-            this.lblProcurar.AutoSize = true;
-            this.lblProcurar.Location = new System.Drawing.Point(564, 16);
-            this.lblProcurar.Name = "lblProcurar";
-            this.lblProcurar.Size = new System.Drawing.Size(47, 13);
-            this.lblProcurar.TabIndex = 2;
-            this.lblProcurar.Text = "Procurar";
-            // 
-            // txtProcurar
-            // 
-            this.txtProcurar.Location = new System.Drawing.Point(617, 13);
-            this.txtProcurar.Name = "txtProcurar";
-            this.txtProcurar.Size = new System.Drawing.Size(164, 20);
-            this.txtProcurar.TabIndex = 3;
-            this.txtProcurar.TextChanged += new System.EventHandler(this.txtProcurar_TextChanged);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -158,24 +122,61 @@
             // 
             // Editar
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.NullValue = "Editar";
-            this.Editar.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.NullValue = "Editar";
+            this.Editar.DefaultCellStyle = dataGridViewCellStyle2;
             this.Editar.HeaderText = "";
             this.Editar.Name = "Editar";
             this.Editar.ReadOnly = true;
             this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataMember = "Usuario";
+            this.usuarioBindingSource.DataSource = this.topicos3CadAdminDataSetBindingSource;
+            // 
+            // topicos3CadAdminDataSetBindingSource
+            // 
+            this.topicos3CadAdminDataSetBindingSource.DataSource = this.topicos3CadAdminDataSet;
+            this.topicos3CadAdminDataSetBindingSource.Position = 0;
+            // 
+            // topicos3CadAdminDataSet
+            // 
+            this.topicos3CadAdminDataSet.DataSetName = "Topicos3CadAdminDataSet";
+            this.topicos3CadAdminDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usuarioTableAdapter
+            // 
+            this.usuarioTableAdapter.ClearBeforeFill = true;
+            // 
+            // lblProcurar
+            // 
+            this.lblProcurar.AutoSize = true;
+            this.lblProcurar.Location = new System.Drawing.Point(420, 18);
+            this.lblProcurar.Name = "lblProcurar";
+            this.lblProcurar.Size = new System.Drawing.Size(47, 13);
+            this.lblProcurar.TabIndex = 2;
+            this.lblProcurar.Text = "Procurar";
+            // 
+            // txtProcurar
+            // 
+            this.txtProcurar.Location = new System.Drawing.Point(473, 15);
+            this.txtProcurar.Name = "txtProcurar";
+            this.txtProcurar.Size = new System.Drawing.Size(164, 20);
+            this.txtProcurar.TabIndex = 3;
+            this.txtProcurar.TextChanged += new System.EventHandler(this.txtProcurar_TextChanged);
+            // 
             // CadAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(646, 375);
             this.Controls.Add(this.txtProcurar);
             this.Controls.Add(this.lblProcurar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnNovoUsuario);
             this.Name = "CadAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CadAdmin";
             this.Load += new System.EventHandler(this.CadAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

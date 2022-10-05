@@ -16,9 +16,12 @@ namespace A1Topicos3
 {
     public partial class HomeUsuario : Form
     {
+        dbContext db = new dbContext();
         public HomeUsuario()
         {
             InitializeComponent();
+            lbCarrosCadastrados.Text = "Carros cadastrados: " + db.Carro.Count();
+            lbRevisão.Text = "Suas revisões: " + db.Revisao.Where(x => x.usuario_id == Const.usuarioLogado.id && x.dataRevisao > DateTime.Now).Count();
         }
 
         private void HomeUsuario_FormClosing(object sender, FormClosingEventArgs e)
