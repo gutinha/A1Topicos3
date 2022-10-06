@@ -21,7 +21,7 @@ namespace A1Topicos3
         {
             InitializeComponent();
             lbCarrosCadastrados.Text = "Carros cadastrados: " + db.Carro.Count();
-            lbRevisão.Text = "Suas revisões: " + db.Revisao.Where(x => x.usuario_id == Const.usuarioLogado.id && x.dataRevisao > DateTime.Now).Count();
+            lbRevisão.Text = "Suas revisões: " + db.Revisao.Where(x => x.usuario_id == Const.usuarioLogado.id && x.dataRevisao >= DateTime.Now).Count();
         }
 
         private void HomeUsuario_FormClosing(object sender, FormClosingEventArgs e)
@@ -47,6 +47,18 @@ namespace A1Topicos3
         {
             AgendarRevisao agendar = new AgendarRevisao();
             agendar.Show();
+        }
+
+        private void btConsultarRevisao_Click(object sender, EventArgs e)
+        {
+            ConsultarRevisao cr = new ConsultarRevisao();
+            cr.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            lbCarrosCadastrados.Text = "Carros cadastrados: " + db.Carro.Count();
+            lbRevisão.Text = "Suas revisões: " + db.Revisao.Where(x => x.usuario_id == Const.usuarioLogado.id && x.dataRevisao >= DateTime.Now).Count();
         }
     }
 }

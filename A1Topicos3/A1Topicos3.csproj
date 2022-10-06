@@ -69,6 +69,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EnderecoDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FormsAdmin\ConsultarRevisaoAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsAdmin\ConsultarRevisaoAdmin.Designer.cs">
+      <DependentUpon>ConsultarRevisaoAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormsAdmin\ManagerAdmin\CadastrarAdmin\CadAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,12 @@
     <Compile Include="FormsUsuario\AgendarRevisao.Designer.cs">
       <DependentUpon>AgendarRevisao.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsUsuario\ConsultarRevisao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsUsuario\ConsultarRevisao.Designer.cs">
+      <DependentUpon>ConsultarRevisao.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormsUsuario\ManagerEndereco\CadEndereco.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,6 +240,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Topicos3CarroDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Topicos3DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Topicos3DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Topicos3EnderecoDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -240,6 +257,9 @@
     </Compile>
     <Compile Include="Util\ListToDataTableConverter.cs" />
     <Compile Include="Util\Utils.cs" />
+    <EmbeddedResource Include="FormsAdmin\ConsultarRevisaoAdmin.resx">
+      <DependentUpon>ConsultarRevisaoAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormsAdmin\ManagerAdmin\CadastrarAdmin\CadAdmin.resx">
       <DependentUpon>CadAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -281,6 +301,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsUsuario\AgendarRevisao.resx">
       <DependentUpon>AgendarRevisao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsUsuario\ConsultarRevisao.resx">
+      <DependentUpon>ConsultarRevisao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsUsuario\ManagerEndereco\CadEndereco.resx">
       <DependentUpon>CadEndereco.cs</DependentUpon>
@@ -526,6 +549,17 @@
     </None>
     <None Include="Topicos3CarroDataSet.xss">
       <DependentUpon>Topicos3CarroDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Topicos3DataSet.xsc">
+      <DependentUpon>Topicos3DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Topicos3DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Topicos3DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Topicos3DataSet.xss">
+      <DependentUpon>Topicos3DataSet.xsd</DependentUpon>
     </None>
     <None Include="Topicos3EnderecoDataSet.xsc">
       <DependentUpon>Topicos3EnderecoDataSet.xsd</DependentUpon>

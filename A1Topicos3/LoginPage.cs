@@ -57,5 +57,11 @@ namespace A1Topicos3
         {
             Application.OpenForms["Login"].Close();
         }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Application.OpenForms["Login"].Show();
+        }
     }
 }

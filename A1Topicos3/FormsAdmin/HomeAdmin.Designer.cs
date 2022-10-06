@@ -38,6 +38,7 @@
             this.buttonMarca = new System.Windows.Forms.Button();
             this.btManagerCarro = new System.Windows.Forms.Button();
             this.lbRevisaoAserFeita = new System.Windows.Forms.Label();
+            this.btConsultarRevisoes = new System.Windows.Forms.Button();
             this.toolStripMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,11 +124,22 @@
             this.lbRevisaoAserFeita.TabIndex = 8;
             this.lbRevisaoAserFeita.Text = "Revisões a serem feitas:";
             // 
+            // btConsultarRevisoes
+            // 
+            this.btConsultarRevisoes.Location = new System.Drawing.Point(15, 131);
+            this.btConsultarRevisoes.Name = "btConsultarRevisoes";
+            this.btConsultarRevisoes.Size = new System.Drawing.Size(97, 57);
+            this.btConsultarRevisoes.TabIndex = 9;
+            this.btConsultarRevisoes.Text = "Consultar revisões";
+            this.btConsultarRevisoes.UseVisualStyleBackColor = true;
+            this.btConsultarRevisoes.Click += new System.EventHandler(this.btConsultarRevisoes_Click);
+            // 
             // HomeAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(355, 213);
+            this.Controls.Add(this.btConsultarRevisoes);
             this.Controls.Add(this.lbRevisaoAserFeita);
             this.Controls.Add(this.btManagerCarro);
             this.Controls.Add(this.buttonMarca);
@@ -156,5 +168,6 @@
         private System.Windows.Forms.Button buttonMarca;
         private System.Windows.Forms.Button btManagerCarro;
         private System.Windows.Forms.Label lbRevisaoAserFeita;
+        private System.Windows.Forms.Button btConsultarRevisoes;
     }
 }

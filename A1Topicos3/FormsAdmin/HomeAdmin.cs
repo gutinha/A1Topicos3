@@ -22,7 +22,7 @@ namespace A1Topicos3
         public HomeAdmin()
         {
             InitializeComponent();
-            lbRevisaoAserFeita.Text = "Revisões a serem feitas: " + db.Revisao.Where(x => x.dataRevisao > DateTime.Now).Count();
+            lbRevisaoAserFeita.Text = "Revisões a serem feitas: " + db.Revisao.Where(x => x.dataRevisao >= DateTime.Now).Count();
         }
 
         private void HomeAdmin_FormClosing(object sender, FormClosingEventArgs e)
@@ -47,7 +47,7 @@ namespace A1Topicos3
         {
             HomeManagerMarca homeMarca = new HomeManagerMarca();
             homeMarca.Show();
-            this.Hide();
+            Hide();
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -57,9 +57,15 @@ namespace A1Topicos3
 
         private void btManagerCarro_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             HomeManagerCarro managerCarro = new HomeManagerCarro();
             managerCarro.Show();
+        }
+
+        private void btConsultarRevisoes_Click(object sender, EventArgs e)
+        {
+            ConsultarRevisaoAdmin cra = new ConsultarRevisaoAdmin():
+            cra.Show();
         }
     }
 }

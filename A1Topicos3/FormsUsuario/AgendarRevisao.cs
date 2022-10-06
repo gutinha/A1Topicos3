@@ -44,7 +44,8 @@ namespace A1Topicos3.FormsUsuario
                 revisao.carro_id = carId.id;
                 db.Revisao.Add(revisao);
                 db.SaveChanges();
-                MessageBox.Show("Revisão agendada com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);            
+                MessageBox.Show("Revisão agendada com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Close();
             }
             catch (Exception)
             {
