@@ -35,6 +35,7 @@
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btCadastrarCarro = new System.Windows.Forms.Button();
+            this.btConsultarCarro = new System.Windows.Forms.Button();
             this.toolStripMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,11 +92,22 @@
             this.btCadastrarCarro.UseVisualStyleBackColor = true;
             this.btCadastrarCarro.Click += new System.EventHandler(this.btCadastrarCarro_Click);
             // 
+            // btConsultarCarro
+            // 
+            this.btConsultarCarro.Location = new System.Drawing.Point(110, 51);
+            this.btConsultarCarro.Name = "btConsultarCarro";
+            this.btConsultarCarro.Size = new System.Drawing.Size(92, 49);
+            this.btConsultarCarro.TabIndex = 7;
+            this.btConsultarCarro.Text = "Consultar Carro";
+            this.btConsultarCarro.UseVisualStyleBackColor = true;
+            this.btConsultarCarro.Click += new System.EventHandler(this.btConsultarCarro_Click);
+            // 
             // HomeManagerCarro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(299, 263);
+            this.Controls.Add(this.btConsultarCarro);
             this.Controls.Add(this.btCadastrarCarro);
             this.Controls.Add(this.toolStripMenu);
             this.Name = "HomeManagerCarro";
@@ -117,5 +129,6 @@
         private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
         private System.Windows.Forms.Button btCadastrarCarro;
+        private System.Windows.Forms.Button btConsultarCarro;
     }
 }

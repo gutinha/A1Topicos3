@@ -129,6 +129,12 @@
     <Compile Include="FormsAdmin\ManagerCarro\CadCarro.Designer.cs">
       <DependentUpon>CadCarro.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsAdmin\ManagerCarro\ConsultarCarro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsAdmin\ManagerCarro\ConsultarCarro.Designer.cs">
+      <DependentUpon>ConsultarCarro.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormsAdmin\ManagerCarro\HomeManagerCarro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -286,6 +292,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsAdmin\ManagerCarro\CadCarro.resx">
       <DependentUpon>CadCarro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsAdmin\ManagerCarro\ConsultarCarro.resx">
+      <DependentUpon>ConsultarCarro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsAdmin\ManagerCarro\HomeManagerCarro.resx">
       <DependentUpon>HomeManagerCarro.cs</DependentUpon>

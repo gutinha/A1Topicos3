@@ -64,7 +64,7 @@ namespace A1Topicos3
 
         private void btConsultarRevisoes_Click(object sender, EventArgs e)
         {
-            ConsultarRevisaoAdmin cra = new ConsultarRevisaoAdmin():
+            ConsultarRevisaoAdmin cra = new ConsultarRevisaoAdmin();
             cra.Show();
         }
     }

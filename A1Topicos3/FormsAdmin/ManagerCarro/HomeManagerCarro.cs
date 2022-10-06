@@ -42,5 +42,11 @@ namespace A1Topicos3.FormsAdmin.ManagerCarro
             HomeAdmin homeAdmin = new HomeAdmin();
             homeAdmin.Show();
         }
+
+        private void btConsultarCarro_Click(object sender, EventArgs e)
+        {
+            ConsultarCarro cc = new ConsultarCarro();
+            cc.Show();
+        }
     }
 }
