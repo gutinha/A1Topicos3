@@ -26,6 +26,10 @@ namespace A1Topicos3
             string email = txtEmail.Text;
             string senha = txtSenha.Text;
             var a = db.Usuario.Where(x => x.email == email && x.senha == senha && x.ativo == true).ToList();
+            if (String.IsNullOrEmpty(txtEmail.Text) || String.IsNullOrEmpty(txtSenha.Text))
+            {
+                MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             var b = a.Any() ? MessageBox.Show("Redirecionando para o menu", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information) : MessageBox.Show("E-mail ou senha incorretos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             if (a.Count != 0)
             {
